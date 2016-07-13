@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD91376B-038F-4542-BBC4-C8091793EE4C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reporter</RootNamespace>
+    <AssemblyName>Reporter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jayrock.Json">
+      <HintPath>..\packages\jayrock-json.0.9.16530.1\lib\net40\Jayrock.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\Font-Awesome-3.2.1\css\font-awesome-ie7.css" />
+    <Content Include="css\Font-Awesome-3.2.1\css\font-awesome-ie7.min.css" />
+    <Content Include="css\Font-Awesome-3.2.1\css\font-awesome.css" />
+    <Content Include="css\Font-Awesome-3.2.1\css\font-awesome.min.css" />
+    <Content Include="css\Font-Awesome-3.2.1\font\fontawesome-webfont.svg" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\css\prettify.css" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\css\pygments.css" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\ico\favicon.ico" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\img\contribution-sample.png" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\img\fort_awesome.jpg" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\img\glyphicons-halflings.png" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\backbone.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\bootstrap-2.3.1.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\bootstrap-222.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\prettify.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\site.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\underscore.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\ZeroClipboard-1.1.7.min.js" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\js\ZeroClipboard-1.1.7.swf" />
+    <Content Include="css\Font-Awesome-3.2.1\src\cheatsheet.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\community.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\design.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\examples.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\get-started.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\icons.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\index.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\license.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\test.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\whats-new.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\ads\carbon-dark-vertical.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\ads\carbon-light-horizontal.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\ads\carbon-light-vertical.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\brand-license.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\cheatsheet.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\community.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\community\getting-support.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\community\project-milestones.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\community\reporting-bugs.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\community\requesting-new-icons.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\community\submitting-pull-requests.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\animated-spinner.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\bordered-pulled.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\bulleted-lists.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\button-dropdowns.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\button-groups.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\buttons.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\custom.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\form-inputs.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\inline-icons.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\larger-icons.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\navigation.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\new.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\rotated-flipped.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\examples\stacked.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\footer.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\get-started.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\brand.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\currency.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\directional.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\medical.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\new.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\text-editor.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\video-player.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\icons\web-application.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\jumbotron-slider.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\jumbotron.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\license.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\navbar.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\stripe-ad.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\stripe-social.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\tell-me-thanks.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\tests\rotated-flipped-inside-anchor.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\tests\rotated-flipped-inside-btn.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\tests\rotated-flipped.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\tests\stacked-inside-anchor.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\tests\stacked.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\thanks-to.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\whats-new.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\why.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_layouts\base.html" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_layouts\icon.html" />
+    <Content Include="css\main.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\department.png" />
+    <Content Include="img\top_bg1.png" />
+    <Content Include="index.aspx" />
+    <Content Include="css\bootstrap-table.css" />
+    <Content Include="js\bootstrap-table.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Desk.js" />
+    <Content Include="js\hotel.js" />
+    <Content Include="js\jQuerysession.js" />
+    <Content Include="js\Pay.js" />
+    <Content Include="js\SubMenu.js" />
+    <Content Include="js\treeview.js" />
+    <Content Include="js\main.js" />
+    <Content Include="packages.config" />
+    <Content Include="css\Font-Awesome-3.2.1\.gitignore" />
+    <Content Include="css\Font-Awesome-3.2.1\.ruby-version" />
+    <Content Include="css\Font-Awesome-3.2.1\composer.json" />
+    <Content Include="css\Font-Awesome-3.2.1\CONTRIBUTING.md" />
+    <Content Include="css\Font-Awesome-3.2.1\font\fontawesome-webfont.eot" />
+    <Content Include="css\Font-Awesome-3.2.1\font\fontawesome-webfont.ttf" />
+    <Content Include="css\Font-Awesome-3.2.1\font\fontawesome-webfont.woff" />
+    <Content Include="css\Font-Awesome-3.2.1\font\FontAwesome.otf" />
+    <Content Include="css\Font-Awesome-3.2.1\Gemfile" />
+    <Content Include="css\Font-Awesome-3.2.1\Gemfile.lock" />
+    <Content Include="css\Font-Awesome-3.2.1\less\bootstrap.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\core.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\extras.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\font-awesome-ie7.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\font-awesome.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\icons.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\mixins.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\path.less" />
+    <Content Include="css\Font-Awesome-3.2.1\less\variables.less" />
+    <Content Include="css\Font-Awesome-3.2.1\package.json" />
+    <Content Include="css\Font-Awesome-3.2.1\README.md" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\font-awesome-ie7.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\font-awesome.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_bootstrap.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_core.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_extras.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_icons.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_mixins.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_path.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\scss\_variables.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\font\FontAwesome.otf" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\bootstrap.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\core.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\extras.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\font-awesome.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\icons.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\mixins.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\path.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\less\variables.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\font-awesome-ie7.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\font-awesome.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_bootstrap.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_core.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_extras.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_icons.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_mixins.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_path.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\font-awesome\scss\_variables.scss" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\img\icon-flag.pdf" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\accordion.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\alerts.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\bootstrap.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\breadcrumbs.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\button-groups.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\buttons.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\carousel.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\close.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\code.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\component-animations.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\dropdowns.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\forms.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\grid.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\hero-unit.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\labels-badges.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\layouts.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\media.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\mixins.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\modals.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\navbar.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\navs.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\pager.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\pagination.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\popovers.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\progress-bars.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\reset.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\responsive-1200px-min.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\responsive-767px-max.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\responsive-768px-979px.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\responsive-navbar.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\responsive-utilities.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\responsive.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\scaffolding.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\sprites.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\tables.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\thumbnails.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\tooltip.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\type.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\utilities.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\variables.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\bootstrap-2.3.2\wells.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\lazy.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\mixins.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\responsive-1200px-min.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\responsive-767px-max.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\responsive-768px-979px.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\responsive-navbar.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\responsive.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\site.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\sticky-footer.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\assets\less\variables.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\CNAME" />
+    <Content Include="css\Font-Awesome-3.2.1\src\icons.yml" />
+    <Content Include="css\Font-Awesome-3.2.1\src\Makefile" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_includes\license-code.less" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_plugins\icon_page_generator.rb" />
+    <Content Include="css\Font-Awesome-3.2.1\src\_plugins\site.rb" />
+    <Content Include="css\Font-Awesome-3.2.1\_config.yml" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\reporter.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\reset.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\supersized.css" />
+    <Content Include="Global.asax" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="js\jquery-2.1.4.js" />
+    <Content Include="js\supersized-init.js" />
+    <Content Include="js\supersized.3.2.7.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="ReportForm\DeskAnalysis.aspx" />
+    <Content Include="ReportForm\Rankings.aspx" />
+    <Content Include="ReportForm\Receipt.aspx" />
+    <Content Include="ReportForm\RefundInfo.aspx" />
+    <Content Include="ReportForm\SalesCount.aspx" />
+    <Content Include="ReportForm\TodayOrder.aspx" />
+    <Content Include="ReportForm\TodaySales.aspx" />
+    <Content Include="ReportForm\WePay.aspx" />
+    <Content Include="ReportForm\YingyeYilan.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\myDbconn.cs" />
+    <Compile Include="Models\myTime.cs" />
+    <Compile Include="ReportForm\DeskAnalysis.aspx.cs">
+      <DependentUpon>DeskAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\DeskAnalysis.aspx.designer.cs">
+      <DependentUpon>DeskAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\Rankings.aspx.cs">
+      <DependentUpon>Rankings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\Rankings.aspx.designer.cs">
+      <DependentUpon>Rankings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\RefundInfo.aspx.cs">
+      <DependentUpon>RefundInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\RefundInfo.aspx.designer.cs">
+      <DependentUpon>RefundInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\SalesCount.aspx.cs">
+      <DependentUpon>SalesCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\SalesCount.aspx.designer.cs">
+      <DependentUpon>SalesCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\TodayOrder.aspx.cs">
+      <DependentUpon>TodayOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\TodayOrder.aspx.designer.cs">
+      <DependentUpon>TodayOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\TodaySales.aspx.cs">
+      <DependentUpon>TodaySales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\TodaySales.aspx.designer.cs">
+      <DependentUpon>TodaySales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\WePay.aspx.cs">
+      <DependentUpon>WePay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\WePay.aspx.designer.cs">
+      <DependentUpon>WePay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\YingyeYilan.aspx.cs">
+      <DependentUpon>YingyeYilan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm\YingyeYilan.aspx.designer.cs">
+      <DependentUpon>YingyeYilan.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9238</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9215/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
